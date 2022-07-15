@@ -5,7 +5,7 @@ import SideBar from "../components/SideBar";
 
 const Cliente = () => {
     return (
-<div className="title" >GABRIELA FUNCIONA HPTAAAA </div>
+<div className="title" >ClientInterface </div>
     )
 }
 export default Cliente;

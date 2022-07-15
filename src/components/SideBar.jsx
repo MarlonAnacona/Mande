@@ -109,7 +109,7 @@ const SideBar = ({ children }) => {
                                         initial="hidden"
                                         animate="show"
                                         exit="hidden"
-                                        className="link_text">{route.name})</motion.div>
+                                        className="link_text">{route.name}</motion.div>
                                 )
                                 }
                             </AnimatePresence>
