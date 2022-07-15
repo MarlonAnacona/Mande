@@ -25,7 +25,7 @@ function App() {
 
       <SideBar>
         <Routes>
-      <Route path="/cliente" element={< Cliente />} />
+      <Route path="/client" element={< Cliente />} />
       
       
       <Route path="/Ajustes" element={< ClienteSettings />} />

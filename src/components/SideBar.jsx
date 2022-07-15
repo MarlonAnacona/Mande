@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const routes = [
     {
-        path: "/cliente",
+        path: "/client",
         name: "Cliente",
         icon: <FaHome></FaHome>,
     }
