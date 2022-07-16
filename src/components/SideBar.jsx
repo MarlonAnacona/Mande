@@ -13,13 +13,13 @@ const routes = [
     }
     ,
     {
-        path: "/Ajustes",
+        path: "/settings",
         name: "Ajustes",
         icon: <BiCog></BiCog>,
 
     },
     {
-        path: "/Perfil",
+        path: "/profile",
         name: "Perfil",
         icon: <ImProfile></ImProfile>,
 

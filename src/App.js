@@ -7,6 +7,7 @@ import Cliente from "./screens/Cliente";
 import ClienteSettings from "./screens/ClienteSettings";
 import ClientePerfil from "./screens/ClientePerfil";
 import SideBar from "./components/SideBar";
+import Maps from "./components/Map";
 
 
 function App() {
@@ -28,8 +29,8 @@ function App() {
       <Route path="/client" element={< Cliente />} />
       
       
-      <Route path="/Ajustes" element={< ClienteSettings />} />
-      <Route path="/Perfil" element={< ClientePerfil />} />
+      <Route path="/settings" element={< ClienteSettings />} />
+      <Route path="/profile" element={< ClientePerfil />} />
       </Routes>
       </SideBar>
     </BrowserRouter>
