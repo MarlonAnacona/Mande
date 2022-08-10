@@ -4,14 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   let navigate = useNavigate();
+
   return (
-
     <div className="App">
-
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
-
             <h3 className="Auth-form-title">Ingresar</h3>
             <div className="text-center">
               No estas registrado?{" "}
@@ -42,9 +40,12 @@ const Login = () => {
               />
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary" onClick={() => navigate("/cliente")}>
+              <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={() => navigate("/cliente")}
+              >
                 Ingresar
-
               </button>
             </div>
             <p className="text-center mt-2">
