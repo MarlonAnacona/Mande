@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { getAllClients } from "../services/api/clients";
 
 const ClientePerfil = () => {
   const [data, setData] = useState(null);
@@ -8,20 +8,14 @@ const ClientePerfil = () => {
     getData();
   }, []);
 
-  const getData = (id) => {
-    axios
-      .get(`http://localhost:3000/products`)
+  const getData = () => {
+    getAllClients()
       .then((res) => {
-        setData(res.data);
+        console.log(res);
       })
-      .catch((err) => console.log(err));
-
-    /*   axios
-      .post("https://reqres.in/api/articles", article)
-      .then((response) => setArticleId(response.data.id))
       .catch((err) => {
-        console.log(err);
-      }); */
+        console.error(err);
+      });
   };
 
   return (
