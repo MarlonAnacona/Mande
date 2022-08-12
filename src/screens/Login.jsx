@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../services/api/users";
 import Swal from "sweetalert2";
+import { LoginContext } from "../context/LoginContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
     password: "",
   });
 
+  const { setIsLogged } = useContext(LoginContext);
   const [loading, setLoading] = useState(false);
 
   let navigate = useNavigate();
@@ -34,7 +36,7 @@ const Login = () => {
           allowOutsideClick: false,
           showCancelButton: false,
         }).then(() => {
-          navigate("/cliente");
+          setIsLogged(true);
         });
       })
       .catch((err) => {

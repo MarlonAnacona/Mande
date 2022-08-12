@@ -18,7 +18,7 @@ const ClientePerfil = () => {
 
   return (
     <div style={{ padding: "20px" }} className="container">
-      {data ? (
+      {data && (
         <div className="main-body">
           <section className="row gutters-sm w-100vh">
             <div className="col-md-4 mb-3">
@@ -109,8 +109,6 @@ const ClientePerfil = () => {
             </div>
           </section>
         </div>
-      ) : (
-        <h1>No hay datos de usuario, logueate </h1>
       )}
     </div>
   );
