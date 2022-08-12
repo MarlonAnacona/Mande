@@ -100,55 +100,55 @@ const ClientePerfil = () => {
           </div>
 
           <div className="col-md-8">
-            <div class="card mb-3">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Nombre completo</h6>
+            <div className="card mb-3">
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Nombre completo</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">Kenneth Valdez</div>
+                  <div className="col-sm-9 text-secondary">Kenneth Valdez</div>
                 </div>
                 <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Correo electronico</h6>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Correo electronico</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">fip@jukmuh.al</div>
+                  <div className="col-sm-9 text-secondary">fip@jukmuh.al</div>
                 </div>
                 <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Telefono</h6>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Telefono</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">(239) 816-9029</div>
+                  <div className="col-sm-9 text-secondary">(239) 816-9029</div>
                 </div>
                 <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Tipo de documento</h6>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Tipo de documento</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">(320) 380-4539</div>
+                  <div className="col-sm-9 text-secondary">(320) 380-4539</div>
                 </div>
                 <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Numero de documento</h6>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Numero de documento</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">
+                  <div className="col-sm-9 text-secondary">
                     Bay Area, San Francisco, CA
                   </div>
                 </div>
                 <hr />
-                <div class="row">
-                  <div class="col-sm-3">
-                    <h6 class="mb-0">Direccion</h6>
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h6 className="mb-0">Direccion</h6>
                   </div>
-                  <div class="col-sm-9 text-secondary">
+                  <div className="col-sm-9 text-secondary">
                     Bay Area, San Francisco, CA
                   </div>
                 </div>
                 {/*  <hr />
-                <div class="row">
+                <div className="row">
                   <div class="col-sm-12">
                     <a
                       class="btn btn-info "

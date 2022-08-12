@@ -6,6 +6,7 @@ const endpoints = {
   },
   users: {
     registerUser: `${URL}/users/register`,
+    loginUser: `${URL}/users/login`,
   },
   products: {},
   workers: {},

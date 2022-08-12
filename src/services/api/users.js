@@ -13,4 +13,15 @@ const addUser = async (body) => {
   return response.data;
 };
 
-export { addUser };
+const loginUser = async (body) => {
+  const config = {
+    headers: {
+      accept: "*/*",
+      "Content-Type": "application/json",
+    },
+  };
+
+  const response = await Axios.post(endpoints.users.loginUser, body, config);
+  return response.data;
+};
+export { addUser, loginUser };

@@ -51,7 +51,6 @@ const Register = () => {
                 allowOutsideClick: false,
                 showCancelButton: false,
               }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
                   navigate("/login");
                 }
@@ -143,7 +142,7 @@ const Register = () => {
               <input
                 type="number"
                 className="form-control mt-1"
-                placeholder="51050652"
+                placeholder="Ingresa tu numero de documento"
                 onChange={handleChange}
                 name="numeroDocumento"
                 required
@@ -154,7 +153,7 @@ const Register = () => {
               <input
                 type="text"
                 className="form-control mt-1"
-                placeholder="e.g Jane "
+                placeholder="Ingresa tu nombre"
                 onChange={handleChange}
                 name="nombre"
                 required
@@ -165,7 +164,7 @@ const Register = () => {
               <input
                 type="text"
                 className="form-control mt-1"
-                placeholder="e.g Jane Doe"
+                placeholder="Ingresa tu apellido"
                 onChange={handleChange}
                 name="apellido"
                 required
@@ -216,7 +215,7 @@ const Register = () => {
               <input
                 type="password"
                 className="form-control mt-1"
-                placeholder=""
+                placeholder="Ingresa tu contraseña"
                 name="password"
                 required
                 onChange={handleChange}
