@@ -24,7 +24,7 @@ const Login = () => {
     loginUser(data)
       .then((response) => {
         setLoading(false);
-        localStorage.setItem("userData", JSON.stringify(response.data));
+        localStorage.setItem("userData", JSON.stringify(response));
 
         Swal.fire({
           icon: "success",
@@ -39,6 +39,7 @@ const Login = () => {
       })
       .catch((err) => {
         onError(err);
+        setLoading(false);
       });
   };
 
