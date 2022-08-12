@@ -4,7 +4,9 @@ const endpoints = {
   clients: {
     getAll: `${URL}/cliente`,
   },
-  users: {},
+  users: {
+    registerUser: `${URL}/users/register`,
+  },
   products: {},
   workers: {},
 };

@@ -1,7 +1,7 @@
 import Axios from "axios";
 import endpoints from "./index";
 
-const getAllClients = async () => {
+const addUser = async (body) => {
   const config = {
     headers: {
       accept: "*/*",
@@ -9,8 +9,8 @@ const getAllClients = async () => {
     },
   };
 
-  const response = await Axios.get(endpoints.clients.getAll, config);
+  const response = await Axios.post(endpoints.users.registerUser, body, config);
   return response.data;
 };
 
-export { getAllClients };
+export { addUser };
