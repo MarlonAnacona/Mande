@@ -6,8 +6,17 @@ const Register = () => {
   const [client, setClient] = useState(null);
 
   const handleChange = (e) => {
-    setClient(e.target.value);
+    setClient({ ...client, [e.targer.name]: e.target.value });
   };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      ...client,
+      cc: "1231231",
+    };
+  };
+
   const [tarjet, setTarjet] = useState(null);
 
   const handleChange1 = (e1) => {
@@ -124,6 +133,23 @@ const Register = () => {
             </div>
             {client === "1" && (
               <>
+                <div className="form-group mt-3">
+                  <label>Cedula</label>
+                  <input
+                    type="text"
+                    className="form-control mt-1"
+                    placeholder=""
+                  />
+                </div>
+                <div className="form-group mt-3">
+                  <label>Celular </label>
+                  <input
+                    type="text"
+                    className="form-control mt-1"
+                    placeholder=""
+                  />
+                </div>
+
                 <div className="form-group mt-3">
                   <label>Tipo de tarjeta</label>
                   <select

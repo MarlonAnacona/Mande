@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllClients } from "../servies/api/clients";
+import { getAllClients } from "../services/api/clients";
 
 const ClientePerfil = () => {
   const [data, setData] = useState(null);
