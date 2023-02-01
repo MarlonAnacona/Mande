@@ -6,7 +6,6 @@ const getAllClients = async () => {
     headers: {
       accept: "*/*",
       "Content-Type": "application/json",
-      //Authorization: Cookie.get("token"),
     },
   };
 

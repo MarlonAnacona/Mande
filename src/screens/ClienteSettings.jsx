@@ -1,10 +1,5 @@
-const ClienteSettings=()=>{
+const ClienteSettings = () => {
+  return <div className="Title">ClienteSettings</div>;
+};
 
-    return (
-        
-    <div className="Title">ClienteSettings</div>
-    ); 
-    }
-    
-    
-    export default  ClienteSettings;
+export default ClienteSettings;

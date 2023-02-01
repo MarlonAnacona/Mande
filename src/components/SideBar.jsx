@@ -64,86 +64,79 @@ const SideBar = ({ children }) => {
   };
   return (
     <>
-      {location.pathname.includes("/register") ||
-      location.pathname.includes("/login") ? (
-        children
-      ) : (
-        <div className="main-container">
-          <motion.div
-            animate={{
-              width: isOpen ? "250px" : "35px",
-              transition: {
-                duration: 0.2,
-                type: "spring",
-                damping: 10,
-              },
-            }}
-            className="sidebar"
-          >
-            <div className="top_section">
+      <div className="main-container">
+        <motion.div
+          animate={{
+            width: isOpen ? "250px" : "35px",
+            transition: {
+              duration: 0.2,
+              type: "spring",
+              damping: 10,
+            },
+          }}
+          className="sidebar"
+        >
+          <div className="top_section">
+            {isOpen && (
+              <motion.h1
+                variants={showAnimation}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                className="logo"
+              >
+                Bienvenido{" "}
+              </motion.h1>
+            )}
+            <div style={{ cursor: "pointer" }} className="bars">
+              <FaBars onClick={toogle} />
+            </div>
+          </div>
+          <div className="search">
+            <div className="search_icon">
+              <BiSearch />
+            </div>
+            <AnimatePresence>
               {isOpen && (
-                <motion.h1
-                  variants={showAnimation}
+                <motion.input
                   initial="hidden"
                   animate="show"
                   exit="hidden"
-                  className="logo"
-                >
-                  Bienvenido{" "}
-                </motion.h1>
+                  variants={inputAnimation}
+                  placeholder="search..."
+                />
               )}
-              <div style={{ cursor: "pointer" }} className="bars">
-                <FaBars onClick={toogle} />
-              </div>
-            </div>
-            <div className="search">
-              <div className="search_icon">
-                <BiSearch />
-              </div>
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.input
-                    initial="hidden"
-                    animate="show"
-                    exit="hidden"
-                    variants={inputAnimation}
-                    placeholder="search..."
-                  />
-                )}
-              </AnimatePresence>
-            </div>
+            </AnimatePresence>
+          </div>
 
-            <section className="routes">
-              {routes.map((route) => (
-                <NavLink
-                  to={route.path}
-                  key={route.name}
-                  activateClassName=""
-                  className={(isActive) =>
-                    !isActive ? " link" : "link active"
-                  }
-                >
-                  <div className="icon">{route.icon} </div>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        variants={showAnimation}
-                        initial="hidden"
-                        animate="show"
-                        exit="hidden"
-                        className="link_text"
-                      >
-                        {route.name}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </NavLink>
-              ))}
-            </section>
-          </motion.div>
-          {children}
-        </div>
-      )}
+          <section className="routes">
+            {routes.map((route) => (
+              <NavLink
+                to={route.path}
+                key={route.name}
+                activateClassName=""
+                className={(isActive) => (!isActive ? " link" : "link active")}
+              >
+                <div className="icon">{route.icon} </div>
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      variants={showAnimation}
+                      initial="hidden"
+                      animate="show"
+                      exit="hidden"
+                      className="link_text"
+                    >
+                      {route.name}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </NavLink>
+            ))}
+          </section>
+        </motion.div>
+        {children}
+      </div>
     </>
   );
 };
